@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lukemorris.flashscan">
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/flashlogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".splashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".homePage"
+            android:label="Home_Page"
+            android:parentActivityName=".splashScreen">
+
+        </activity>
+        <activity
+            android:name=".myFlashCardDecks"
+            android:label="myFlash_Cards"
+            android:parentActivityName=".homePage"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+        android:name=".addOrCreateDeck"
+        android:label="addOrCreateDeck"
+        android:parentActivityName=".homePage">
+
+     </activity>
+        <activity
+            android:name=".cardCreation"
+            android:label="cardCreation"
+            android:parentActivityName=".addOrCreateDeck">
+
+        </activity>
+
+        <activity
+            android:name=".cardDesignation"
+            android:label="card_Designation"
+            android:parentActivityName=".addOrCreateDeck">
+
+        </activity>
+        <activity
+            android:name=".addDeckToSubject"
+            android:label="addDeckToSubject"
+            android:parentActivityName=".addOrCreateDeck">
+
+        </activity>
+        <activity
+            android:name=".addNewCardSelection"
+            android:label="addNew_CardsSelection"
+            android:parentActivityName=".cardDesignation">
+
+        </activity>
+        <activity
+        android:name=".Scanner"
+        android:label="Scanner"
+        android:parentActivityName=".addNewCardSelection"
+            android:windowSoftInputMode="adjustNothing">
+
+    </activity>
+        <activity
+            android:name=".manualAddCard"
+            android:label="manualAddCard"
+            android:parentActivityName=".addNewCardSelection"
+            android:windowSoftInputMode="adjustNothing">
+        </activity>
+
+        <activity
+            android:name=".studyModeSelect"
+            android:label="studyModeSelect"
+            android:parentActivityName=".homePage">
+
+        </activity>
+
+        <activity
+            android:name=".myFlashCards"
+            android:label="myFlashCards"
+            android:parentActivityName=".myFlashCardDecks">
+
+        </activity>
+    </application>
+
+</manifest>

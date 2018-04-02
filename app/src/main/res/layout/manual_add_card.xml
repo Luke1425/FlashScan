@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="6">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:background="@android:color/background_dark">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            android:weightSum="3">
+
+            <TextView
+                android:text="Manually Add Cards"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textColor="@android:color/background_light"
+                android:textSize="28dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textStyle="normal|bold|italic"
+                android:id="@+id/textView"
+                android:background="#006666" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/backimageicon"
+                android:id="@+id/backButtonDecks"
+                android:layout_weight="1"
+
+                android:scaleType="fitCenter"
+                android:background="#006666"
+                android:elevation="0dp"
+                android:layout_gravity="center_vertical"
+                android:onClick="backButton" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:weightSum="9">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@android:color/background_dark"
+                android:weightSum="3"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:id="@+id/toplayout">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/frontOfCardET"
+                    android:layout_weight="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:hint="Enter Front of Flashcard"
+                    android:paddingLeft="10dp"
+                    android:maxLength="50"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:background="@android:color/background_dark">
+
+                <EditText
+                    android:inputType="textMultiLine"
+                android:lines="10"
+                android:minLines="5"
+                android:gravity="top|left"
+                android:maxLines="15"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:scrollbars="vertical"
+
+                    android:background="@android:color/background_light"
+                    android:hint="Enter Back of Flash Card"
+                    android:padding="10dp"
+                    android:id="@+id/backOfCardET" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_dark">
+
+                <Button
+                    android:text="Add Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button4"
+                    android:layout_weight="1"
+                    android:background="#006666"
+                    android:textColor="@android:color/background_light"
+                    android:layout_margin="5dp"
+                    android:onClick="addCardButton" />
+
+                <Button
+                    android:text="Clear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button3"
+                    android:layout_weight="1"
+                    android:background="#006666"
+                    android:textColor="@android:color/background_light"
+                    android:layout_margin="5dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
